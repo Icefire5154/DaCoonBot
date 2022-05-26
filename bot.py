@@ -55,6 +55,8 @@ async def on_message(message):
         await channel.send(msg, " added to shitposts")
         
         #I think this will work - will have to change the regular shitpost command to take from the photos.txt instead of 'shitposts.photos'
+        #file = open('helloworld.txt','r') for file.read
+        #f = open('helloworld.txt','a') for file.append
 
 
 @client.event
