@@ -41,6 +41,20 @@ async def on_message(message):
 
         msg = await client.wait_for('message', check=None)
         shitposts.photos.append(msg)
+        
+        # new code - adding 5/26 - designed to test out working with a text file - work with the console then figure out how to transfer to discord
+        
+        channel = message.channel
+        await channel.send("Link your shitpost"):
+            msg = await client.wait_for('message', check=None)
+            file = open('photos.txt', 'w')
+            file.write(msg)
+            file.close()
+         
+        channel = message.channel
+        await channel.send(msg, " added to shitposts")
+        
+        #I think this will work - will have to change the regular shitpost command to take from the photos.txt instead of 'shitposts.photos'
 
 
 @client.event
